@@ -1,7 +1,5 @@
-
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/native-stack';
-import { NavigationContainer } from '@react-navigation/native';
+
 import {
   StyleSheet,
   Text,
@@ -11,13 +9,15 @@ import {
 } from 'react-native';
 
 
-const ForgotPass= ({navigation})=> {
+const ForgotPass= ()=> {
   return (
       <View style={styles.mainContainer}>
       <View style={styles.upperContainer}></View>
       <View style={styles.lowerContainer}>
-        <TextInput style={styles.input} placeholder='Username' autoCapitalize='none'/>
-        <TextInput style={styles.input} placeholder='Mobile Number'  keyboardType='number-pad'/>
+        <TextInput style={styles.input} placeholder='Username' autoCapitalize='none'/>  
+        {/* //text entry for the username */}
+        <TextInput style={styles.input} placeholder='Mobile Number'  keyboardType='number-pad'/>   
+        {/* //text entry for the mobile number */}
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button}>
             <Text style={styles.btnTxt}>Send OTP</Text>

@@ -16,11 +16,13 @@ function StackScreen() {
     if(loading) setIsLoading(false);
   }
   useEffect(()=>{
+    //getting the authenticated user
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
   },[]);
 
   if(loading) return null;
 
+  //present user with the authentication screens if the user is not signed in and account details otherwise.
   return user ? <AccountStack /> : <LoginStack />;
 
 }

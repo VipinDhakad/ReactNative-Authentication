@@ -4,7 +4,7 @@ import Home from './Home';
 
 function AccountStack() {
   return (
-    <Home/>
+    <Home/>  //shows home screen
   );
 }
 

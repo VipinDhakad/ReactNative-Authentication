@@ -10,14 +10,12 @@ import {
   Image,
   ActivityIndicator
 } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import {useLogin} from '../context/LoginProvider';
-import {getCurrentTimestamp} from 'react-native/Libraries/Utilities/createPerformanceLogger';
+
 import {AuthContext} from '../context/AuthenticationProvider';
 
 const Login = ({navigation}) => {
   // const {isLoggedIn, setIsLoggedIn} = useLogin();
-  const {login} = useContext(AuthContext);
+  const {login} = useContext(AuthContext);      //getting login func from context
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,9 +23,9 @@ const Login = ({navigation}) => {
 
   const handleSignIn=(emailID, pass)=>{
     setLoading(true);
-    if(emailID!= "" && pass !="") login(emailID, pass);
+    if(emailID!= "" && pass !="") login(emailID, pass);    //check for the empty values.
     setTimeout(() => {
-      setLoading(false);
+      setLoading(false);            //for the loading state of the button
     }, 2000);
     
   };

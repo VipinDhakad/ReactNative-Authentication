@@ -11,7 +11,8 @@ export default function Home() {
       <Text>Welcome User</Text>
       <TouchableOpacity
             style={styles.button}
-            onPress={() => logout()}>
+            onPress={() => logout()}>        
+            {/* //logout on pressing the logout button, logout coming from context */}
             <Text style={styles.btnTxt}>Logout</Text>
       </TouchableOpacity>
     </View>
